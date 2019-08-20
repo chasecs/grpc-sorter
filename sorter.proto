@@ -1,0 +1,10 @@
+
+syntax = "proto3";
+package sorter;
+
+message Numbers {
+  repeated int64  numbers = 1;
+}
+service Sorter {
+  rpc QuickSort(Numbers) returns (Numbers) {}
+}
