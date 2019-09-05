@@ -1,10 +1,13 @@
 package main
+
 import (
+	pb "grpc-sorter/protobuf/sorter"
 	"log"
+
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
-	pb "grpc-sorter/protobuf/sorter"
 )
+
 func main() {
 	var conn *grpc.ClientConn
 	conn, err := grpc.Dial(":50051", grpc.WithInsecure())

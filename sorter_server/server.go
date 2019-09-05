@@ -3,9 +3,10 @@ package main
 import (
 	"context"
 	pb "grpc-sorter/protobuf/sorter"
+	qsort "grpc-sorter/sorter_server/qsort"
 	"log"
 	"net"
-	qsort "grpc-sorter/sorter_server/qsort"
+
 	"google.golang.org/grpc"
 )
 
@@ -27,4 +28,3 @@ func main() {
 		log.Fatalf("failed to serve: %v", err)
 	}
 }
-
