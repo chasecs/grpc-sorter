@@ -4,7 +4,7 @@ func sort(arr []int64, startIndex int, endIndex int) {
 	if startIndex >= endIndex {
 		return
 	}
-	pivotIndex := (startIndex + endIndex) / 2
+	pivotIndex := startIndex + (startIndex-endIndex)/2
 	arr[pivotIndex], arr[endIndex] = arr[endIndex], arr[pivotIndex]
 	i, j := startIndex, endIndex-1
 	for i < j {
